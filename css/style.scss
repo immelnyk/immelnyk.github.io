@@ -13,16 +13,16 @@ body {
     background-image: url('../images/pattern.webp');
     background-color: rgba(0, 0, 0, 0.336);
     background-blend-mode: multiply;
-    height: 100vh;
     width: 100%;
-    color: #fff;
+    color: #fafafa;
     font-family: 'Montserrat', sans-serif;
     padding-top: 160px;
+    padding-bottom: 100px;
 }
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: #fafafa;
 }
 
 .container {
@@ -31,8 +31,62 @@ a{
     padding: 0 15px;
 }
 
+.button{
+    outline: none;
+    border: 1px solid #fafafa;
+    background: #000;
+    color: #fafafa;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    position: relative;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        border: 1px solid #fafafa;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translate(10px , 10px);
+        transition: .4s .5s;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        mix-blend-mode: difference;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fafafa;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s;
+    }
+
+    &:hover{
+        &::before{
+            transition: .4s;
+            transform: translate(0,0);
+        }
+        &::after{
+            transition: transform .5s .4s;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}
+
 .split {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     div{
         flex-basis: 50%;
@@ -40,13 +94,13 @@ a{
 }
 
 .header {
-    background-color: rgba($color: #0a0a0a, $alpha: 0.8);
-    box-shadow: 0 0 30px rgba($color: #fff, $alpha: 0.1);
+    background-color: rgba($color: #020202, $alpha: 0.97);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    backdrop-filter: blur(5px);
+    z-index: 999;
+
 
   &__content {
     display: flex;
@@ -134,7 +188,7 @@ a{
             transition: .5s ease .6s;
         }
         #logo-svg {
-            background: #fff;
+            background: #fafafa;
             transition: .5s ease .6s;
         }
     }
@@ -143,16 +197,21 @@ a{
     margin-bottom: 100px;
     &__content {
     }
-    &__img {
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &__subtitle {
         font-size: 22px;
         font-weight: 300;
+        margin-bottom: 40px;
 
         span{
             color: #000;
             padding: 0 5px;
-            background-color: #fff;
+            background-color: #fafafa;
             font-weight: 500;
         }
     }
@@ -179,7 +238,7 @@ a{
     &__list-title{
         margin-bottom: 20px;
         left: 0;
-        -webkit-text-stroke: 1px #fff;
+        -webkit-text-stroke: 1px #fafafa;
         font-size: 74px;
         font-weight: 900;
         line-height: 1;
@@ -201,7 +260,7 @@ a{
             top: 50%;
             left: 0;
             transform: translate(0,-50%);
-            background-color: #fff;
+            background-color: #fafafa;
             mix-blend-mode: difference;
             transition: height .4s .7s , width .7s;
         }
@@ -217,4 +276,67 @@ a{
     }
   }
 
+  #letter-c{
+    animation: letterC 4s infinite ;
+    fill: transparent;
+
+  }
+  #letter-s1{
+    animation: letterS1 4s infinite ;
+    fill: transparent;
+
+  }
+  #letter-s2{
+    animation: letterS2 4s infinite ;
+    fill: transparent;
+  }
+
+@keyframes letterC {
+    0%{
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+    33%{
+        stroke-dashoffset: 0;
+    }
+    66%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes letterS1 {
+    0%{
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+    33%{
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+    66%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes letterS2 {
+    0%{
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+    33%{
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+    66%{
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
   
