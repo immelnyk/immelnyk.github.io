@@ -1,3 +1,8 @@
+
+$color--main--900 : rgb(0, 0, 0);
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,210 @@
 
 body {
     background-image: url('../images/pattern.webp');
+    background-color: rgba(0, 0, 0, 0.336);
+    background-blend-mode: multiply;
     height: 100vh;
     width: 100%;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 160px;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.split {
+    display: flex;
+
+    div{
+        flex-basis: 50%;
+    }
+}
+
+.header {
+    background-color: rgba($color: #0a0a0a, $alpha: 0.8);
+    box-shadow: 0 0 30px rgba($color: #fff, $alpha: 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &__list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+  }
+  &__list-item {
+
+    a{
+        font-size: 18px;
+        padding: 5px 10px;
+        position: relative;
+
+
+        &::after{
+            position: absolute;
+            inset: 0;
+            transform-origin: 0 100%;
+            transform: scaley(.05);
+            background: currentColor;
+            mix-blend-mode: difference;
+            transition: transform .25s;
+            content: ''
+        }
+        &:focus { outline: none }
+
+        &:focus,
+         &:hover { 
+             &::after { transform: none } 
+        }
+    }
+  }
+  &__list-item + li {
+      margin-left: 30px;
+  }
+}
+
+#stroke{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100;
+    animation: logoAnimation 4s  forwards infinite linear;
+    transition: 1s ease;
+}
+#logo-svg{
+    background: transparent;
+    transition: .5s ease ;
+    
+}
+#immelnyk{
+    transition: .5s ease ;
+}
+
+@keyframes logoAnimation {
+    to {
+        stroke-dashoffset: 200;
+    }
+}
+
+.logo {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+
+
+    &:hover{
+        #stroke{
+            animation: none;
+            stroke-dasharray: 400;
+        }
+        #immelnyk{
+            fill: #000;
+            transition: .5s ease .6s;
+        }
+        #logo-svg {
+            background: #fff;
+            transition: .5s ease .6s;
+        }
+    }
+}
+.intro{
+    margin-bottom: 150px;
+    &__content {
+    }
+    &__img {
+    }
+    &__subtitle {
+        font-size: 22px;
+        font-weight: 300;
+
+        span{
+            color: #000;
+            padding: 0 5px;
+            background-color: #fff;
+            font-weight: 500;
+        }
+    }
+    &__title {
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+}
+.about {
+
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li + li {
+        margin-top: 10px;
+    }
+    
+    &__list-title{
+        margin-bottom: 20px;
+        left: 0;
+        -webkit-text-stroke: 1px #fff;
+        font-size: 74px;
+        font-weight: 900;
+        line-height: 1;
+        color: transparent;
+    }
+
+    &__list-item{
+        font-size: 22px;
+        position: relative;
+        padding: 3px 20px;
+        cursor: default;
+
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            height: 7px;
+            width: 7px;
+            top: 50%;
+            left: 0;
+            transform: translate(0,-50%);
+            background-color: #fff;
+            mix-blend-mode: difference;
+            transition: height .4s .7s , width .7s;
+        }
+
+        &:hover{
+            &::before{
+                transition: height .4s , width .7s .3s;
+                height: 100%;
+                width: 100%;
+
+            }
+        }
+    }
+  }
+
+  
