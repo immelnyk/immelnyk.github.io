@@ -1,7 +1,4 @@
 
-$color--main--900 : rgb(0, 0, 0);
-
-
 
 * {
     margin: 0;
@@ -29,6 +26,12 @@ a{
     max-width: 90%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.stroke-letters{
+    -webkit-text-stroke: 1px #fafafa;
+    line-height: 1;
+    color: transparent;
 }
 
 .button{
@@ -223,6 +226,7 @@ a{
 
 }
 .about {
+    margin-bottom: 70px;
 
     ul{
         list-style: none;
@@ -238,11 +242,8 @@ a{
     &__list-title{
         margin-bottom: 20px;
         left: 0;
-        -webkit-text-stroke: 1px #fafafa;
         font-size: 74px;
         font-weight: 900;
-        line-height: 1;
-        color: transparent;
     }
 
     &__list-item{
@@ -339,4 +340,113 @@ a{
         stroke-dashoffset: 0;
     }
 }
+
+.knowledge {
+    text-align: center;
+    ul{
+        text-align: left;
+    }
+    &__additional-list {
+    }
+    &__additional-title {
+        font-size: 54px;
+        margin-bottom: 20px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto 50px auto;
+
+
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 30px;
+            flex-basis: 33.333%;
+            position: relative;
+
+
+
+
+            p{
+                max-width: max-content;
+                font-size: 18px;
+                padding: 0 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,calc(-50% - 15px));
+            }
+            .percent-value{
+                text-align: right;
+                transform: translate(-50%,calc(-50% + 15px));
+            }
+        }
+    }
+    &__title {
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+  }
+
+
+  .progress{
+      stroke-dasharray: 408;
+      stroke-dashoffset: 408;
+  }
+
+  @mixin progress-bar-anim($percent , $animName) {
+    @keyframes #{$animName} {
+        0%{
+            stroke-dashoffset: 408;
+        }
+        20%{
+            stroke-dashoffset: 300;
+        }
+        40%{
+            stroke-dashoffset: 200;
+        }
+        60%{
+            stroke-dashoffset: 100;
+        }
+        80%{
+            stroke-dashoffset: 0;
+        }
+        100%{
+            stroke-dashoffset: $percent;
+        }
+    }
+}
+
+
+  .progress-html{
+      animation: html 1500ms linear forwards ;
+      @include progress-bar-anim(20,html);
+  }
+  .progress-css{
+      animation: css 1500ms linear forwards ;
+      @include progress-bar-anim( 41, css);
+  }
+  .progress-js{
+      animation: js 1500ms linear forwards ;
+      @include progress-bar-anim( 81, js);
+  }
+  .progress-vue{
+      animation: vue 1500ms linear forwards ;
+      @include progress-bar-anim(225 , vue);
+  }
+  .progress-node{
+      animation: node 1500ms linear forwards ;
+      @include progress-bar-anim(163 , node);
+  }
+
+  .progress.pause{
+    animation: none;
+}
+
+
+
   

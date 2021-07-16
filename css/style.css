@@ -27,6 +27,12 @@ a {
   padding: 0 15px;
 }
 
+.stroke-letters {
+  -webkit-text-stroke: 1px #fafafa;
+  line-height: 1;
+  color: transparent;
+}
+
 .button {
   outline: none;
   border: 1px solid #fafafa;
@@ -280,6 +286,10 @@ a {
   margin-bottom: 10px;
 }
 
+.about {
+  margin-bottom: 70px;
+}
+
 .about ul {
   list-style: none;
   display: -webkit-box;
@@ -301,11 +311,8 @@ a {
 .about__list-title {
   margin-bottom: 20px;
   left: 0;
-  -webkit-text-stroke: 1px #fafafa;
   font-size: 74px;
   font-weight: 900;
-  line-height: 1;
-  color: transparent;
 }
 
 .about__list-item {
@@ -456,5 +463,316 @@ a {
   100% {
     stroke-dashoffset: 0;
   }
+}
+
+.knowledge {
+  text-align: center;
+}
+
+.knowledge ul {
+  text-align: left;
+}
+
+.knowledge__additional-title {
+  font-size: 54px;
+  margin-bottom: 20px;
+}
+
+.knowledge__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 50px auto;
+}
+
+.knowledge__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 30px;
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+  position: relative;
+}
+
+.knowledge__list li p {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-size: 18px;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-50% - 15px));
+          transform: translate(-50%, calc(-50% - 15px));
+}
+
+.knowledge__list li .percent-value {
+  text-align: right;
+  -webkit-transform: translate(-50%, calc(-50% + 15px));
+          transform: translate(-50%, calc(-50% + 15px));
+}
+
+.knowledge__title {
+  font-size: 54px;
+  margin-bottom: 30px;
+}
+
+.progress {
+  stroke-dasharray: 408;
+  stroke-dashoffset: 408;
+}
+
+.progress-html {
+  -webkit-animation: html 1500ms linear forwards;
+          animation: html 1500ms linear forwards;
+}
+
+@-webkit-keyframes html {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+
+@keyframes html {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+
+.progress-css {
+  -webkit-animation: css 1500ms linear forwards;
+          animation: css 1500ms linear forwards;
+}
+
+@-webkit-keyframes css {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 41;
+  }
+}
+
+@keyframes css {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 41;
+  }
+}
+
+.progress-js {
+  -webkit-animation: js 1500ms linear forwards;
+          animation: js 1500ms linear forwards;
+}
+
+@-webkit-keyframes js {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 81;
+  }
+}
+
+@keyframes js {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 81;
+  }
+}
+
+.progress-vue {
+  -webkit-animation: vue 1500ms linear forwards;
+          animation: vue 1500ms linear forwards;
+}
+
+@-webkit-keyframes vue {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 225;
+  }
+}
+
+@keyframes vue {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 225;
+  }
+}
+
+.progress-node {
+  -webkit-animation: node 1500ms linear forwards;
+          animation: node 1500ms linear forwards;
+}
+
+@-webkit-keyframes node {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 163;
+  }
+}
+
+@keyframes node {
+  0% {
+    stroke-dashoffset: 408;
+  }
+  20% {
+    stroke-dashoffset: 300;
+  }
+  40% {
+    stroke-dashoffset: 200;
+  }
+  60% {
+    stroke-dashoffset: 100;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 163;
+  }
+}
+
+.progress.pause {
+  -webkit-animation: none;
+          animation: none;
 }
 /*# sourceMappingURL=style.css.map */
