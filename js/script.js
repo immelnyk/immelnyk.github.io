@@ -25,7 +25,6 @@ window.addEventListener('scroll' , () => {
 
 function animatePercentage(el){
     if (!el.classList.contains('play')) {
-        console.log(el.getAttribute('data-progress'));
         const getDataPercent = el.getAttribute('data-progress');
 
         function animateValue(id, start, end, duration) {
