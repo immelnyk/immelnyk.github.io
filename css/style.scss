@@ -346,8 +346,6 @@ a{
     ul{
         text-align: left;
     }
-    &__additional-list {
-    }
     &__additional-title {
         font-size: 54px;
         margin-bottom: 20px;
@@ -357,7 +355,8 @@ a{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 auto 50px auto;
+        margin: 0 auto 100px auto;
+
 
 
         li{
@@ -389,6 +388,51 @@ a{
     &__title {
         font-size: 54px;
         margin-bottom: 30px;
+    }
+
+    &__additional-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        flex-wrap: wrap;
+
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            flex: 25%;
+            position: relative;
+
+            &::before{
+                content: attr(data-title);
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                color: #000;
+                background: #fff;
+                padding: 5px 10px;
+                font-weight: 700;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transform-origin: top;
+                transition: .3s;
+            }
+
+            &:hover{
+
+                &::before{
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+
+            }
+
+            img{
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
     }
   }
 
@@ -446,6 +490,7 @@ a{
   .progress.pause{
     animation: none;
 }
+
 
 
 
