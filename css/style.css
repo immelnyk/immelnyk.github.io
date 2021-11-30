@@ -11,8 +11,8 @@ body {
   background-blend-mode: multiply;
   width: 100%;
   color: #fafafa;
-  font-family: 'Montserrat', sans-serif;
-  padding-top: 160px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 140px;
   padding-bottom: 100px;
 }
 
@@ -40,13 +40,13 @@ a {
   color: #fafafa;
   padding: 10px 20px;
   font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   position: relative;
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   display: block;
@@ -57,12 +57,12 @@ a {
   height: 100%;
   -webkit-transform: translate(10px, 10px);
           transform: translate(10px, 10px);
-  -webkit-transition: .4s .5s;
-  transition: .4s .5s;
+  -webkit-transition: 0.4s 0.5s;
+  transition: 0.4s 0.5s;
 }
 
 .button::after {
-  content: '';
+  content: "";
   position: absolute;
   mix-blend-mode: difference;
   top: 0;
@@ -74,24 +74,24 @@ a {
           transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .button:hover::before {
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
 .button:hover::after {
-  -webkit-transition: -webkit-transform .5s .4s;
-  transition: -webkit-transform .5s .4s;
-  transition: transform .5s .4s;
-  transition: transform .5s .4s, -webkit-transform .5s .4s;
+  -webkit-transition: -webkit-transform 0.5s 0.4s;
+  transition: -webkit-transform 0.5s 0.4s;
+  transition: transform 0.5s 0.4s;
+  transition: transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: scaleX(1);
@@ -162,11 +162,11 @@ a {
           transform: scaley(0.05);
   background: currentColor;
   mix-blend-mode: difference;
-  -webkit-transition: -webkit-transform .25s;
-  transition: -webkit-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s;
-  content: '';
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  content: "";
 }
 
 .header__list-item a:focus {
@@ -185,21 +185,21 @@ a {
 #stroke {
   stroke-dashoffset: 0;
   stroke-dasharray: 100;
-  -webkit-animation: logoAnimation 4s  forwards infinite linear;
-          animation: logoAnimation 4s  forwards infinite linear;
+  -webkit-animation: logoAnimation 4s forwards infinite linear;
+          animation: logoAnimation 4s forwards infinite linear;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
 #logo-svg {
   background: transparent;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 #immelnyk {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 @-webkit-keyframes logoAnimation {
@@ -241,14 +241,14 @@ a {
 
 .logo:hover #immelnyk {
   fill: #000;
-  -webkit-transition: .5s ease .6s;
-  transition: .5s ease .6s;
+  -webkit-transition: 0.5s ease 0.6s;
+  transition: 0.5s ease 0.6s;
 }
 
 .logo:hover #logo-svg {
   background: #fafafa;
-  -webkit-transition: .5s ease .6s;
-  transition: .5s ease .6s;
+  -webkit-transition: 0.5s ease 0.6s;
+  transition: 0.5s ease 0.6s;
 }
 
 .intro {
@@ -323,7 +323,7 @@ a {
 }
 
 .about__list-item::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 7px;
@@ -334,13 +334,13 @@ a {
           transform: translate(0, -50%);
   background-color: #fafafa;
   mix-blend-mode: difference;
-  -webkit-transition: height .4s .7s , width .7s;
-  transition: height .4s .7s , width .7s;
+  -webkit-transition: height 0.4s 0.7s, width 0.7s;
+  transition: height 0.4s 0.7s, width 0.7s;
 }
 
 .about__list-item:hover::before {
-  -webkit-transition: height .4s , width .7s .3s;
-  transition: height .4s , width .7s .3s;
+  -webkit-transition: height 0.4s, width 0.7s 0.3s;
+  transition: height 0.4s, width 0.7s 0.3s;
   height: 100%;
   width: 100%;
 }
@@ -575,8 +575,8 @@ a {
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .knowledge__additional-list li:hover::before {
@@ -758,7 +758,7 @@ a {
     stroke-dashoffset: 0;
   }
   100% {
-    stroke-dashoffset: 225;
+    stroke-dashoffset: 81;
   }
 }
 
@@ -779,7 +779,7 @@ a {
     stroke-dashoffset: 0;
   }
   100% {
-    stroke-dashoffset: 225;
+    stroke-dashoffset: 81;
   }
 }
 

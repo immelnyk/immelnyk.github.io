@@ -1,0 +1,76 @@
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-me {
+  margin-bottom: 40px;
+}
+
+.about-me ul {
+  list-style: none;
+}
+
+.about-me li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.about-me li span {
+  min-width: 220px;
+  display: block;
+  font-weight: 400;
+  font-weight: 700;
+}
+
+.about-me li span + span {
+  font-weight: 400;
+}
+
+.my_photo {
+  text-align: center;
+}
+
+.my_photo img {
+  max-width: 250px;
+}
+
+.socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.socials__item {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials__item:hover svg {
+  fill: lightblue;
+}
+
+.socials__item:hover p {
+  color: lightblue;
+}
+
+.socials__item p {
+  padding-left: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.socials__item svg {
+  max-width: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/*# sourceMappingURL=about.css.map */
