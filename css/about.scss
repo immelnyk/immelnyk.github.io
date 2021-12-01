@@ -41,6 +41,12 @@ h2 {
     &:hover {
       svg {
         fill: lightblue;
+        path {
+          fill: lightblue;
+        }
+        #flh {
+          fill: rgb(66, 172, 207);
+        }
       }
       p {
         color: lightblue;

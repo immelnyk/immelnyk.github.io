@@ -58,6 +58,14 @@ h2 {
   fill: lightblue;
 }
 
+.socials__item:hover svg path {
+  fill: lightblue;
+}
+
+.socials__item:hover svg #flh {
+  fill: #42accf;
+}
+
 .socials__item:hover p {
   color: lightblue;
 }

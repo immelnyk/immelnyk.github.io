@@ -1,0 +1,17 @@
+.owl-carousel div {
+  max-height: 70vh;
+  height: 500px;
+  overflow: hidden;
+}
+
+.owl-carousel div img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+body {
+  padding: 120px 0 0 0;
+}
+/*# sourceMappingURL=gallery.css.map */
